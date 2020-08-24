@@ -8,6 +8,7 @@ pkgbase = retroarch-standalone-service
 	arch = arm
 	arch = armv6h
 	arch = armv7h
+	arch = aarch64
 	license = MIT
 	depends = retroarch
 	depends = retroarch-assets-xmb
@@ -21,8 +22,8 @@ pkgbase = retroarch-standalone-service
 	source = retroarch-standalone.xinitrc
 	sha256sums = 5efc1dcc2d220a33f0d53d6abe4538227f434ff2a00f5165bb209cf6e0bae4a3
 	sha256sums = 48d9f35b943209764990050a06dea9bd356aa275adccb3e0a835e738e6beb0c6
-	sha256sums = 4c56ad43f3a5f209b4f3fb433b9ce4e0573b032cee21e587f912d6bc1d851423
-	sha256sums = 4eb68b4b61e812d7047cf52ebd14c590637bb2b0594b13a288134a827a8429c1
+	sha256sums = 16355b39c55aa173b6ab1c5f2115f667fe01bdca7c3d7ae5f3a301666e64fb48
+	sha256sums = 0b0171e9b21496d03585ec2bf89298c36e4c86179bc0315f49bdb081b648a523
 
 pkgname = retroarch-standalone-service
 
