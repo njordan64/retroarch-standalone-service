@@ -6,14 +6,18 @@ xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don't blank the video device
 
 # Hide mouse cursor
-unclutter -display :0.0 -noevents -root &
+unclutter -display :0.0 -root &
 
 # Clean old debug logs
 rm /home/retroarch/debug.log 2>&1 >&/dev/null
 
 # Autostart Retroarch
-/usr/bin/retroarch --appendconfig=/etc/retroarch-standalone.cfg -v 2>&1 >&/home/retroarch/debug.log
-if [ "$?" -eq "0" ]; then
-  sudo shutdown -h now
-fi
+exit_code=1
+while [ "$exit_code" -ne "0" ]
+do
+  /usr/bin/retroarch --appendconfig=/etc/retroarch-standalone.cfg -v --log-file /home/retroarch/debug.log
+  exit_code=$?
+done
+
+sudo shutdown -h now
 
